@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Patseer_Automation">
+  <test  name="Patseer">
+  
+  <parameter name="URL" value="https://acc.patseer.com/p/login"/>
+  <parameter name="UName" value="stephen@patentinsightpro.com"/>
+  <parameter name="Password" value="771baner"/>
+  
+    <classes> 
+    
+    <class name="PatseerQueries.Login"/>
+    <class name="PatseerQueries.FetchData"/>
+     <class name="PatseerQueries.Queries1">
+   
+     <methods>
+     <include name="test_Queries" /> 
+     </methods>
+     
+ 	 </class>
+ 
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Patseer_Automation">
+  <test  name="Patseer">
+  
+  <parameter name="URL" value="https://acc.patseer.com/p/login"/>
+  <parameter name="UName" value="stephen@patentinsightpro.com"/>
+  <parameter name="Password" value="771baner"/>
+  
+    <classes> 
+    <class name="SearchSide.Login"/>
+    <class name="PatseerQueries.FetchData"/>
+     <class name="PatseerQueries.Queries">
+     <methods>
+     <include name="test_Queries" /> 
+     </methods>
+ 	 </class>
+ 	<class name="SearchSide.SearchResultPage">
+ 
+ <methods>
+  
+ 	      <include name="configure" />   
+ 	       <include name="Check_Full_text_filter" />	 
+		 
+ 		 <include name="check_Synonyms_Quick_Search" />
+ 		 <include name="Check_LimitBy_In_Quick_Search" />
+ 		 <include name="check_Template" />
+ 		 <include name="check_Wrong_Fieldcode_YellowMessage" />
+ 		 <include name="check_WrongLID_Message" />	 
+ 		 <include name="Select_some_records_and_check_the_count_of_selected_records_displayed" />
+ 		  <include name="Check_CPC_Filter" />
+ 	 	<include name="Check_Current_Owner_Filter" />
+ 	   
+    
+ </methods>
+ 	</class>
+
+	  <class name="SearchSide.DetailedViewS">
+      <methods>
+          <include name="Detailedview_Iconand_Link" />
+          <include name="subsidiary" />
+          <include name="Check_Family_Member_Status" />
+          <include name="Key_concepts_Browse_Classes" />
+          <include name="CopyClassDefinition" />
+          <include name="Register"/>
+          <include name="Check_Family_member_openinnewTab_and_Pdficon_in_DetailedView" />
+          <include name="FI_Term_onDetailed_view_Tooltip" />
+		  <include name="US_Pair_ClickOn_LegalStatusIcon_OnDetailview" />
+          <include name="check_citation_of_Self_SFAM_EFAM_on_DetailView" />
+          <include name="doc_undoc" />
+          <include name="View_Category_Of_Citations_on_DetailView" />
+          <include name="Claims_Fallback" />
+          <include name="UnfoldImagesAnd_PlusIcon" />
+          <include name="Check_Family_coverage_map_and_Legal_status_timeline_tree" />
+          <include name="Family_Export" />   	 
+                
+       
+      </methods>
+      
+      </class>
+    
+      
+     
+     
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
